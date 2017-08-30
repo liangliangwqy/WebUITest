@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 from tkinter import *
-import diffimage
+
+
 class Application(Frame):
     def __init__(self, master=None):
         Frame.__init__(self, master)

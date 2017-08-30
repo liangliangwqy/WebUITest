@@ -2,9 +2,29 @@
 # -*- coding: UTF-8 -*-
 
 import time
+import os,re
 from selenium import webdriver
+import urllib3
 
-def capture(url, save_fn=".\\shot-now.png"):
+
+def capture(url, save_fn='.\\shot-now.png'):
+
+    #获取url的域名
+    protocol,host,a=urllib3.get_host(url)
+
+    #去掉url的前缀
+    urlpath1,num1=re.subn(r'://','_',url)
+    #把url里面的点替换成下划线
+    urlpath,num2=re.subn(r'\/','_',urlpath1)
+    print(urlpath)
+    #保存原图的路径
+    save_fnpath = os.path.abspath('..') + '\\projects\\' +host+'\\baseimages'
+    if not os.path.exists(save_fnpath):
+        os.makedirs(save_fnpath)
+    save_fn=save_fnpath+'\\'+urlpath+'_base.png'
+    print(save_fn)
+
+    #调用webdriver获取页面截图
     browser = webdriver.Ie()  # Get local session of browser
     browser.set_window_size(1920, 1080)
     browser.get(url)  # Load page
@@ -40,4 +60,4 @@ def capture(url, save_fn=".\\shot-now.png"):
 
 
 if __name__ == "__main__":
-    capture("http://www.meizu.com/pro7")
+    capture("https://www.meizu.com/products/pro6plus/summary.html")

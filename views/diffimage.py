@@ -3,13 +3,15 @@
  
 
 from PIL import Image
-from PIL import ImageChops 
-import capture
+from PIL import ImageChops
+
 import gui.gui
+from views import capture
+
 #获取页面截图
 website=gui.gui.app.difff
 #    input('请输入需要获取页面截图的网址：')
-capture.capture('http://'+website)
+capture.capture('http://' + website)
 
 def compare_images(path_one, path_two, diff_save_location):
     """
