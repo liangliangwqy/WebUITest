@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*  
+# -*- coding: utf-8 -*-
 #本程序从网上获取关键的获取网站链接部分代码，地址：http://blog.csdn.net/hitwangpeng/article/details/47952479
 import os  
 import re  
@@ -12,11 +12,11 @@ def getinfo(webaddress):
     print('正在抓取>>>>> '+url)#提示表示正在抓取网站
 
     #判断项目目录是否存在，如果不存在就创建项目目录
-    projectpath=os.path.abspath('..')+'\\projects\\'+webaddress
+    projectpath=os.path.abspath('.')+'\\projects\\'+webaddress
     if not os.path.exists(projectpath):
         os.makedirs(projectpath)
     print(webaddress+'的项目目录是：'+projectpath)
-
+    '''
     #定义下载的网页文件存放目录
     websitefilepath=projectpath+'\\websitefile'
     print(webaddress+'页面文件目录是:'+websitefilepath)
@@ -28,8 +28,8 @@ def getinfo(webaddress):
     else:
         os.makedirs(websitefilepath)  #生成该文件夹
         print('文件夹已生成')
-
-    outputfilepath = os.path.abspath('..')+'\\projects\\'+webaddress+'\\output.txt'#在项目文件夹下创建一个过渡性质的文件output.txt
+    '''
+    outputfilepath = os.path.abspath('.')+'\\projects\\'+webaddress+'\\output.txt'#在项目文件夹下创建一个过渡性质的文件output.txt
 
     print('过渡文件output.txt的存储位置：'+outputfilepath)
     fobj = open(outputfilepath,'w+')
@@ -49,7 +49,7 @@ def getinfo(webaddress):
     fobj1.close()  
     if os.path.exists(outputfilepath):#将过渡文件output.txt删除  
         pass
-        #os.remove(outputfilepath)#os.remove用于删除文件
+        os.remove(outputfilepath)#os.remove用于删除文件
   
 if __name__=="__main__":  
     webaddress = input("请输入网址(不需要前缀 \"http://\"):")

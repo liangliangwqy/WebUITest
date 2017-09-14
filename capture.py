@@ -2,33 +2,34 @@
 # -*- coding: UTF-8 -*-
 
 import time
-import os,re
+import os,re,sys
+import chromecapture
+import getsave_fn
+#python版selenium安装命令：sudo easy_install selenium
 from selenium import webdriver
 import urllib3
+#PIL 模块安装命令：pip install pillow
 from PIL import Image
 
-def capture(url,savepath='baseimages'):
-    #获取url的域名
-    protocol,host,a=urllib3.get_host(url)
-    print('url:' + url)
-    #去掉url的前缀
-    urlpath1,num1=re.subn(r'://','_',url)
-    #把url里面的点替换成下划线
-    urlpath,num2=re.subn(r'\/','_',urlpath1)
-    print('urlpath:'+urlpath)
-
-    #保存原图的路径
-    save_fnpath = os.path.abspath('..') + '\\projects\\' +host+'\\'+savepath
-    if not os.path.exists(save_fnpath):
-        os.makedirs(save_fnpath)
-    save_fn=save_fnpath+'\\'+urlpath+'_base.png'
-    print('save_fn:'+save_fn)
-
+#本方法用于firefox和IE11浏览器获取网页的长截图
+def capture(url,savepath='baseimages',whichbrowser='IE'):
+    #生成图片的文件名
+    save_fn=getsave_fn.save_fn(url,savepath,whichbrowser)
     #调用webdriver获取页面截图
-    browser = webdriver.Ie()  # Get local session of browser
-    browser.set_window_size(1920, 1080)
+    if whichbrowser=='IE':
+        browser = webdriver.Ie()  # Get local session of browser
+        print('IE')
+    else:
+        browser = webdriver.Firefox()
+    #把浏览器窗口设置的很高，可以在firefox和IE11（不使用这种方法也可以）上获取整个网页的截图，Chrome和Edge不行。
     browser.get('http://'+url)  # Load page
-
+    js= "return document.body.scrollHeight.toString()"
+    highpx=browser.execute_script(js)
+    print('highpx',highpx)
+    if whichbrowser == 'IE':
+        browser.set_window_size(1920,int(highpx)+116)
+    else:
+        browser.set_window_size(1920-21, int(highpx) + 116)
     # 添加js脚本，使页面滚动到最后，以便加载完所有元素。
     browser.execute_script("""
     (function () {
@@ -54,7 +55,7 @@ def capture(url,savepath='baseimages'):
     for i in range(30):
         if "scroll-done" in browser.title:
             break
-        time.sleep(5)
+        time.sleep(2)
     print('准备保存')
     browser.save_screenshot(save_fn)
     image=Image.open(save_fn)
@@ -66,4 +67,4 @@ def capture(url,savepath='baseimages'):
 
 
 if __name__ == "__main__":
-    capture("bbs.meizu.cn")
+    capture("www.meizu.com/index.html",savepath='newimages',whichbrowser='Firefox')
