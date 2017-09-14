@@ -89,6 +89,7 @@ def chrome_capture(url,savepath='baseimages',whichbrowser='Chrome'):
     print('save_fn in chromecapture:' + save_fn)
     image_merge(img_list,save_fn,whichbrowser)
 
+
 def image_merge(images,save_fn,whichbrowser):
     """垂直合并多张图片
     images - 要合并的图片路径列表
