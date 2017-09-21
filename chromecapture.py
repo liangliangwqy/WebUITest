@@ -3,13 +3,13 @@
 
 #参考程序：http://www.cnblogs.com/sparkling-ly/p/5466644.html
 from selenium import webdriver
-import os
+import os,urllib3
 import time
 from PIL import Image
 import getsave_fn
 
 #本方法用于chrome和edge浏览器获取网页的长截图
-def chrome_capture(url,savepath='baseimages',whichbrowser='Chrome'):
+def chrome_capture(url,screen_pix_w,savepath='baseimages',whichbrowser='Chrome'):
     """chrome截屏
     url- 要截屏的url
     pix_w- 窗口宽
@@ -20,22 +20,26 @@ def chrome_capture(url,savepath='baseimages',whichbrowser='Chrome'):
     global image_pix_h
     pix_h=800#定义页面每次滚动的高度
     image_pix_h = pix_h#分图片的高度等于每次滚动的高度
+    print('screen_pix_w:',screen_pix_w)
+
     if whichbrowser=='Chrome':
-        pix_w=1947-26
+        #pix_w=1947-26
+        pix_w = screen_pix_w - 26
+        #pix_w=1440+34#次参数模拟PRO 7 Plus屏幕宽度
         driver = webdriver.Chrome()
         driver.set_window_size(pix_w, pix_h + 85 + 47)  # 原来是89，猜测为浏览器头的高度，实测是85,47是被自动化软件控制的通知条的高度
     elif whichbrowser=='Edge':
-        pix_w = 1947 - 32
+        pix_w =  screen_pix_w - 32
         driver = webdriver.Edge()
         driver.set_window_size(pix_w, pix_h + 84)  # Edge浏览器的头高度为76,但实际截图时发现84可得到完美的图片
         print('pix_w:', pix_w)
     elif whichbrowser=='Firefox':
-        pix_w = 1947 - 32
+        pix_w =  screen_pix_w - 32
         driver = webdriver.Firefox()
         driver.set_window_size(pix_w, pix_h+109)#Firefox的浏览器头高为109，实际截图时发现**可得到完美的图片
         print('pix_w:', pix_w)
     else:#IE11
-        pix_w = 1947-32
+        pix_w =  screen_pix_w-32
         driver = webdriver.Ie()
         driver.set_window_size(pix_w, pix_h+55+7)  # IE浏览器的头高度为55,但实际截图时发现84可得到完美的图片(793),使用QQ截图时，自动捕获的浏览器窗口和此处设置的x、y值完全相同，但是实际测量窗口高度是少了7个像素，不知为何有7个像素的高度不可见。
         print('pix_w:',pix_w)
@@ -143,4 +147,4 @@ def image_merge(images,save_fn,whichbrowser):
 
 
 if __name__=='__main__':
-    chrome_capture('www.meizu.com/pro7', savepath='newimages',whichbrowser='Edge')
+    chrome_capture('m.meizu.com/note6/',screen_pix_w='1947', savepath='baseimages',whichbrowser='Chrome')

@@ -2,17 +2,17 @@
 # -*- coding: UTF-8 -*-
 
 import time
-import os,re,sys
-import chromecapture
+#import os,re,sys
+#import chromecapture
 import getsave_fn
 #python版selenium安装命令：sudo easy_install selenium
 from selenium import webdriver
-import urllib3
+#import urllib3
 #PIL 模块安装命令：pip install pillow
 from PIL import Image
 
 #本方法用于firefox和IE11浏览器获取网页的长截图
-def capture(url,savepath='baseimages',whichbrowser='IE'):
+def capture(url,screen_pix_w,savepath='baseimages',whichbrowser='IE'):
     #生成图片的文件名
     save_fn=getsave_fn.save_fn(url,savepath,whichbrowser)
     #调用webdriver获取页面截图
@@ -27,9 +27,9 @@ def capture(url,savepath='baseimages',whichbrowser='IE'):
     highpx=browser.execute_script(js)
     print('highpx',highpx)
     if whichbrowser == 'IE':
-        browser.set_window_size(1920,int(highpx)+116)
+        browser.set_window_size(screen_pix_w,int(highpx)+116)
     else:
-        browser.set_window_size(1920-21, int(highpx) + 116)
+        browser.set_window_size(screen_pix_w-21, int(highpx) + 116)
     # 添加js脚本，使页面滚动到最后，以便加载完所有元素。
     browser.execute_script("""
     (function () {

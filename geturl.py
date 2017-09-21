@@ -2,7 +2,7 @@
 #本程序从网上获取关键的获取网站链接部分代码，地址：http://blog.csdn.net/hitwangpeng/article/details/47952479
 import os  
 import re  
-import shutil
+#import shutil
 
 REJECT_FILETYPE = 'rar,7z,css,js,jpg,jpeg,gif,bmp,png,swf,exe'#定义爬虫过程中不下载的文件类型
 def getinfo(webaddress):  
