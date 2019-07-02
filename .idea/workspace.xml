@@ -1,29 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ef49ae8-b6b8-465a-9e28-aa74c975f797" name="Default" comment="UPDATE">
-      <change afterPath="$PROJECT_DIR$/WebTest.spec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/WebTest.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/WebTest.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webuitest/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webuitest/capture.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webuitest/chromecapture.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webuitest/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webuitest/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webuitest/tests/test_chrome_capture.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/WebTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WebUITest.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebTest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capture.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chromecapture.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/diffimage.py" beforeDir="false" afterPath="$PROJECT_DIR$/webuitest/diffimage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/getsave_fn.py" beforeDir="false" afterPath="$PROJECT_DIR$/webuitest/getsave_fn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/geturl.py" beforeDir="false" afterPath="$PROJECT_DIR$/webuitest/geturl.py" afterDir="false" />
+    <list default="true" id="6ef49ae8-b6b8-465a-9e28-aa74c975f797" name="Default" comment="优化目录结构">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,8 +21,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webuitest/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+            <state relative-caret-position="171">
+              <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
               <folding>
                 <element signature="e#65#74#0" expanded="true" />
               </folding>
@@ -52,18 +31,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/__init__.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webuitest/__init__.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/webuitest/tests/__init__.py">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -99,7 +72,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webuitest/getallurl.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-8">
@@ -218,6 +191,7 @@
         <option value="$PROJECT_DIR$/bin/__init__.py" />
         <option value="$PROJECT_DIR$/webuitest/__init__.py" />
         <option value="$PROJECT_DIR$/webuitest/tests/__init__.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -246,23 +220,7 @@
             <path>
               <item name="WebUITest" type="b2602c69:ProjectViewProjectNode" />
               <item name="WebTest" type="462c0819:PsiDirectoryNode" />
-              <item name="bin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebUITest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebTest" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebUITest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebTest" type="462c0819:PsiDirectoryNode" />
               <item name="webuitest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebUITest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebTest" type="462c0819:PsiDirectoryNode" />
-              <item name="webuitest" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -275,7 +233,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="Python" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -564,7 +522,7 @@
       <option name="presentableId" value="Default" />
       <updated>1503902472145</updated>
       <workItem from="1562049160851" duration="532000" />
-      <workItem from="1562049733738" duration="5150000" />
+      <workItem from="1562049733738" duration="6282000" />
     </task>
     <task id="LOCAL-00001" summary="UPDATE">
       <created>1504087214652</created>
@@ -594,13 +552,20 @@
       <option name="project" value="LOCAL" />
       <updated>1505373250961</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="优化目录结构">
+      <created>1562055686657</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1562055686657</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5682000" />
+    <option name="totallyTimeSpent" value="6814000" />
   </component>
-  <component name="TodoView">
+  <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -612,7 +577,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="22" width="1936" height="1066" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17803837" />
+      <window_info active="true" content_ui="combo" x="793" y="89" width="334" height="932" id="Project" order="0" visible="true" weight="0.17803837" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="调试" />
@@ -622,11 +587,11 @@
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48720682" weight="0.38075882" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="TODO" order="6" sideWeight="0.4717484" visible="true" weight="0.32939914" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5282516" side_tool="true" visible="true" weight="0.32939914" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4717484" weight="0.32939914" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.26279318" side_tool="true" visible="true" weight="0.32832617" />
       <window_info anchor="bottom" id="Python Console" order="8" sideWeight="0.49573562" weight="0.32938644" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.8315565" weight="0.2832618" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.73773986" weight="0.32832617" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.7372068" visible="true" weight="0.32832617" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -673,7 +638,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value=" 1.0" />
     <MESSAGE value="UPDATE" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE" />
+    <MESSAGE value="优化目录结构" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化目录结构" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/WebUITest$main.coverage" NAME="main Coverage Results" MODIFIED="1562054758193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/webuitest" />
@@ -821,16 +787,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webuitest/getallurl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-          <folding>
-            <element signature="e#45#60#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webuitest/getsave_fn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-8">
@@ -845,24 +801,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/webuitest/tests/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webuitest/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/webuitest/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+        <state relative-caret-position="171">
+          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
           <folding>
             <element signature="e#65#74#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webuitest/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webuitest/tests/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/webuitest/getallurl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+          <folding>
+            <element signature="e#45#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
