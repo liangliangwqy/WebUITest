@@ -3,7 +3,6 @@
 # Author:TangLiang
 import os
 from tkinter import *
-
 from webuitest import chromecapture, diffimage, capture, geturl
 
 
